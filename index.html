@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Equation 1er et 2nd degré</title>
+    </head>
+    <body>
+        
+
+
+    <script>
+
+ function ResolveEquation(a, b, c) {
+
+          
+  if (a === 0) {
+    // Equation of  first degree 
+    if (b === 0) {
+      if (c === 0) {
+        return "la solution est |R (pour Tout réel appartenant à R.)";
+      } else {
+        return "Aucune solution.";
+      }
+    } else {
+      return "La solution est : x = " + (-c / b);
+    }
+  } else {
+    // Equation of second degree
+    const delta = b * b - 4 * a * c;
+    if (delta < 0) {
+      return "L'équation n'a pas de solution réelle.";
+    } else if (delta === 0) {
+      const x = -b / (2 * a);
+      return "La solution est : x = " + x;
+    } else {
+      const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+      const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+      return "Les solutions sont : x1 = " + x1 + " et x2 = " + x2;
+    }
+  }
+
+
+}
+
+    </script>
+    </body>
+</html>
